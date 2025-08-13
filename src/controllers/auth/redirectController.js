@@ -6,6 +6,7 @@ export const redirectController = async (req, res) => {
   console.log(code);
 
   const first_token = await getFirstToken({ code });
+  console.log(first_token);
 
   const token = new Token(first_token);
 
