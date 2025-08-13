@@ -2,7 +2,7 @@ import axios from "axios";
 import { MELI_APP_ID, MELI_CLIENT_SECRET, MELI_REDIRECT_URL } from "../../shared/config.js";
 
 export const getFirstToken = async ({ code }) => {
-    const authorization_url = "https://auth.mercadolibre.com.ar/authorization"
+    const token_url = "https://api.mercadolibre.com/oauth/token"
     
     const urlencoded = new URLSearchParams();
     urlencoded.append("grant_type", "authorization_code");
@@ -13,7 +13,7 @@ export const getFirstToken = async ({ code }) => {
   
     try {
       const { data } = await axios.post(
-        authorization_url,
+        token_url,
         urlencoded,
         {
           headers: {
