@@ -1,5 +1,5 @@
 import axios from "axios";
-import { MELI_APP_ID, MELI_CLIENT_SECRET, MELI_REDIRECT_URL } from "../../shared/config";
+import { MELI_APP_ID, MELI_CLIENT_SECRET, MELI_REDIRECT_URL } from "../../shared/config.js";
 
 export const getFirstToken = async ({ code }) => {
     const authorization_url = "https://auth.mercadolibre.com.ar/authorization"

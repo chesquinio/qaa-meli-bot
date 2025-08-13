@@ -1,5 +1,5 @@
-import { Token } from "../../domain/models/tokens";
-import { getFirstToken } from "../../infrastructure/services/mercadolibreAuth";
+import { Token } from "../../domain/models/tokens.js";
+import { getFirstToken } from "../../infrastructure/services/mercadolibreAuth.js";
 
 export const redirectController = async (req, res) => {
   const { code } = req.query;
